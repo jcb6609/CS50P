@@ -1,0 +1,81 @@
+//Week 0 - Functions:
+/////////////////////////////////////////////////////////////////////////////////////////////
+function(s):
+    * Definition:
+        - "action/verb that let't you do something in the program" --> Any language
+          comes with a predetermined set of functions.
+        - re-usable block of code design to perform a specific task.
+        - reusable block of code that alters an argument (input) to produce certain output.
+
+* print() is a function used to display output/text (strings) to the console
+
+* bug: errors that unable a program to run.
+
+* syntax error --> error related to a possible typo
+
+* What is a variable? 
+    - Sol.: It is a named container used to store data in memory.
+    - A variable is basically a container of some value inside of a computer's program.
+
+* What is memory?
+    - Sol.: Part of the computer where data is temporarily stored while programs are running.
+    - When we refer to memory, we also refer to RAM (Random Access Memory)
+
+* What is RAM (Random Access Memory)?
+    - Sol.: Computer's temporaty working storage used while programs are running.
+
+* = : Assignment operator
+
+* pseudocode: not necessarily english / not necessarily coding syntax to describe the structure of a program/task.
+
+*f-string: format string
+
+anything between these two quotation marks 
+will be taken as a comment, enjoy!
+""
+
+* arguments inside of the documentation --> parameters
+* what you can pass to a function? --> parameters --> what the function can take
+* what those inputs are called --> --> arguments --> what the function is actually taking
+
+* print() function from documentation:
+
+    print(*objects, sep=' ', end='\n', file=sys.stdout, flush=False)
+
+    - *objects --> print() can receive multiple arguments:
+        ~ e.g.: print("Hello", "Julio", 19)
+        ~ * --> "accept many values".
+
+    - sep=' ' --> sep means separator OR ' ',
+        ~ e.g.: print("Hello", "Julio")
+        ~ Output: Hello Julio
+        ~ Output Explanation: Python inserts the separator between arguments.
+        ~ therefore, sep='...' allows to change the separation to the contents in our arguments' outputs
+
+    - end='\n' --> what gets printed at the end automatically adds a newline
+        ~ in fact, adding end="" in our print arguments will avoid doing a default line jump
+        ~ therefore, end="..." allows to add certain line comment/behavior at the end of our print() function
+
+    - file=sys.stdout --> destination where the output goes (standard output stream)
+        ~ Meaning: send output to the normal console output stream
+        ~ Similar to java's System.out
+        ~ sys ≈ System
+        ~ stdout ≈ out
+
+    - flush=False --> Python waits a little before forcing output to appear.
+        ~ 
+
+* Conclusion about the print() function:
+    #print(*objects) can print multiple arguments separated by sep and ending with end.
+
+
+--> Note: keyword argument could not be repeated!!
+    - "*objects, sep=' ', end='\n', file=sys.stdout, flush=False" are keyword parameters!
+
+--> Note: Python allows both single quotes (' ') and double quotes (" ") for strings
+        ~ In the case of "print('I'm Julio')", python will escape because there is an apostrophe ' inside the string.
+        ~ In "print("I'm Julio")", Python works without escaping.
+
+--> Note: Escaping using "\"
+    ~ print("hello, \"friend\"")
+/////////////////////////////////////////////////////////////////////////////////////////////////
