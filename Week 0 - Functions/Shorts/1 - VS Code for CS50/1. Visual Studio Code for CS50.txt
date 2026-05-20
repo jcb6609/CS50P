@@ -1,0 +1,119 @@
+1. Visual Studio Code for CS50
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+Command line interface prompts/actions/keywords:
+
+--> $ # symbol that indicates that the system is ready for you (user) to type and execute a new command.
+
+--> cd # stands for change directory. It allows to move in, out, and around your folders (directories). 
+
+--> mkdir # make directory.
+    --> mkdir indoor # make directory called indoor.
+
+--> cd indoor # access/move in directory indoor.
+    --> You should now see your terminal prompt as indoor/$
+
+--> code # shortcut used to launch VS Code (make files / open files)
+    --> code indoor.py # make a file called indoor.py.
+    --> code indoor_copy.py # If file indoor_copy.py already exits, then it is opened.
+
+--> pyhton # not only a language, but a program that understands that language.
+    --> python indoor.py # runs the program contained in the selected file (indoor.py in this case).
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+* More command to use within Linux and this command line interface specifically
+
+--> ls # list all of the files in your current folder.
+
+--> cp # copy a file from one place to another.
+
+--> mv # move a file OR rename it from one name to another.
+
+--> rm # allows you to delete a file.
+
+--> mkdir # make directory.
+
+--> cd # change directories from one folder to another.
+
+--> rmdir # remove directory.
+
+--> clear # clear ALL your terminal window lines
+
+--> ctrl + l (keyword) # clear ONLY seen terminal lines 
+
+--> "ctrl + c" for copy content (external) --> "right click" in terminal line for pasting (internal)
+
+--> autocomplete while writing the first letters (three at least depending on th overall names) of the file/program then pressing the "Tab" key.
+
+--> .. # parent representation of whatever parent directory (useful to move a file into a previous folder)
+   --> folder/ $ mv not_original.py .. # moving file "not_original.py" to the parent directory/folder, previous to in this case the folder called "folder/".
+
+--> cd .. # going back/navigate (user) to parent directory
+
+--> cd # only writing cd will let you go to your default directory in which you began when you logged in.
+
+--> pressing "up arrow" will let us go to the previous line (history) in our current terminal line (helpful for executing previous mentioned command lines again).
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+$ cd indoor
+indoor/ $ cp indoor.py indoor_copy.py
+indoor/ $ code indoor_copy.py
+indoor/ $ ls
+indoor_copy.py  indoor.py
+indoor/ $ mv indoor_copy.py not_original.py
+indoor/ $ rm not_original.py 
+rm: remove regular file 'not_original.py'? y
+indoor/ $ clear
+
+indoor/ $
+indoor/ $ mkdir folder
+indoor/ $ ls
+folder/  indoor.py
+indoor/ $ cd folder
+indoor/folder/ $ ls
+indoor/folder/ $ code not_original.py
+indoor/folder/ $ ls
+not_original.py
+indoor/folder/ $ mv not_original.py ..
+indoor/folder/ $ ls
+indoor/folder/ $ cd
+$ ls
+indoor/  src0/  src0.zip
+$ rmdir folder
+rmdir: failed to remove 'folder': No such file or directory
+$ cd indoor
+indoor/ $ rm folder
+rm: cannot remove 'folder': Is a directory
+indoor/ $ rmdir folder
+indoor/ $ cd
+$
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+* Note: You can execute the below to check your code using check50, a program that CS50 will
+        use to test your code when you submit. But be sure to test it yourself as well!
+
+* Note: Green smilies mean your program has passed a test! Red frownies will indicate your 
+        program output something unexpected. Visit the URL that check50 outputs to see the 
+        input check50 handed to your program, what output it expected, and what output your 
+        program actually gave.
+
+* Note: submit50 for submitting.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
