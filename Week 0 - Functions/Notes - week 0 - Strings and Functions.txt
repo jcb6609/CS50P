@@ -51,6 +51,7 @@ will be taken as a comment, enjoy!
         ~ Output: Hello Julio
         ~ Output Explanation: Python inserts the separator between arguments.
         ~ therefore, sep='...' allows to change the separation to the contents in our arguments' outputs
+        ~ If you want to use sep, you MUST PASS MULTIPLE ARGUMENTS separated by commas.
 
     - end='\n' --> what gets printed at the end automatically adds a newline
         ~ in fact, adding end="" in our print arguments will avoid doing a default line jump
