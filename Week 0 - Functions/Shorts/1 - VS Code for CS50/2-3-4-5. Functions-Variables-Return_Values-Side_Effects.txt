@@ -1,0 +1,86 @@
+2. Functions
+/////////////////////////////////////////////////////////////////////////////////////////////
+def main():
+    print("Hello, world!") # name of the built-in function, followed by a parenthesis with or without input
+    print("This is CS50P.")
+
+main()
+
+# prompt:
+    python program_name.py
+    Hello, world!
+    This is CS50P.
+////////////////////////////////////////////////////////////////////////////////////////////////////
+3. Variables
+///////////////////////////////////////////////////////////////////////////////////////////////
+time = "7:00 AM"
+timezone = "US/Eastern"
+
+print(time)
+print(timezone)
+print(time + " in " + timezone)
+
+time = "4:45"
+timezone = "Asia/Kathmandu"
+
+
+print(time)
+print(timezone)
+print(time + " in " + timezone)
+
+time = 1234
+time = time + 60
+
+print(time)
+//////////////////////////////////////////////////////////////////////////////////////////////////
+4. Return Values:
+/////////////////////////////////////////////////////////////////////////////////////////////////
+# find the area
+def area(length, width):
+    print(str(length * width) + " square feet") # str(...) converts the input into a string
+
+def returnArea(length, width):
+    print(str(length * width) + " square feet")
+    return length * width # "return" represents not only the actual return of a value but also the end of our function
+
+def main():
+    house = returnArea(50, 20)
+    backyard = returnArea(50, 50)
+    total = house + backyard
+    print(f"toal is {total} square feet")
+
+main()
+        
+# Output:
+    1000 square feet
+    2500 square feet
+    toal is 3500 square feet
+/////////////////////////////////////////////////////////////////////////////////////////////////
+5. Side Effects
+///////////////////////////////////////////////////////////////////////////////////////////////
+emoticon = "v.v" 
+
+def main(): 
+    # always start by reading main() (good design pattern)
+    global emoticon # keyword "global" allows us to modify the global variable "emoticon" inside this local scope for main()
+    
+    say("Is anyone there?") 
+    
+    # actual change of the global variable emoticon inside main() (done thanks to the previous line)
+    # the global emoticon is now altered (a side effect) inside of main(), and this new value PERSISTS outside of main() (global value emoticon is altered)
+    emoticon = "1u1" 
+    
+    # variable "emoticon" is now reassigned to "1u1" (it updates the global variable so it is reflected everywhere)
+    say("Oh, hi!") 
+
+def say(phrase): 
+    # phrase is a local variable, emoticon is the global variable
+    print(phrase + " " + emoticon) 
+
+main() 
+# Side effect: a function modifies state (like the global variable) outside of its local scope
+# here we have a program that uses side effects
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
