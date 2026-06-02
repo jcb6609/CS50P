@@ -1,0 +1,18 @@
+Week 1 - Conditionals
+/////////////////////////////////////////////////////////////////////////////////////////////
+Conditional statements: 
+    - Ability to ask questions and answer those questions in order to decide the execution of
+      certain code (coding flow).
+
+Symbols to ask questions:
+    - ">" : Greater than
+    - ">=": Greater than or equal to
+    - "<" : Less than
+    - "<=": Less than or equal to
+    - "==": Equality comparison
+    - "!=": Disequality comparison
+
+Control flow diagram (read from top to bottom):
+
+elif
+
