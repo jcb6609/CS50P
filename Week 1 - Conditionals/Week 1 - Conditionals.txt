@@ -12,7 +12,17 @@ Symbols to ask questions:
     - "==": Equality comparison
     - "!=": Disequality comparison
 
-Control flow diagram (read from top to bottom):
+Control flow diagram (read from top to bottom)
 
-elif
+elif --> else if: 
+    - Allows us to ask a question that takes into account whether or not our previous question 
+      had a tre or false answer.
+    - Control flow: If we get back a true answer right away in that first if, we are gonna print, then stop
+      (end of the program)
+    - Continues to the next instruction if false, if instruction is met, print, then stop(...)
+    - "The elif keyword allows you to check multiple expressions for True and execute a block 
+      of code as soon as one of the conditions evaluates to True"
 
+else --> "alternative path of execution"
+
+or/|| --> 
