@@ -36,5 +36,7 @@ arithmetic symbols:
 % --> used to calculate the reminder of a division
 
 match:
-    - Mechanism similar to switch. Allows you to express the same ideas a little more compactly
+    - Mechanism similar to switch. Allows you to express the same ideas a little more compactly:
     - use of keyword 'case' on its body
+not:
+    - logical operator used to invert the truth value of a statement, expression, or object
