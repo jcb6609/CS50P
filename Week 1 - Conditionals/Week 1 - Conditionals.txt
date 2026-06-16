@@ -30,8 +30,7 @@ or/||
 and/&&
 
 arithmetic symbols:
-
-+, -, *, /, 
++, -, *, /, %
 
 % --> used to calculate the reminder of a division
 
