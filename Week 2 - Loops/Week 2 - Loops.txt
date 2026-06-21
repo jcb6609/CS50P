@@ -1,0 +1,32 @@
+Week 2 - Loops:
+/////////////////////////////////////////////////////////////////////////////////////////////
+while:
+    - way we could express a loop, a block of code that's going to do something again and again and again-, as many times as we want.
+    - Construct that allows me to ask a question again and again.
+
+for:
+    - loop that allows us to work in a certain range, e.g. in lists or with a range() funct
+
+list:
+    - another type of data
+
+--> "Anything that is iterable, so to speak, is a piece of data that can be used with a loop."
+
+len:
+    - function which will tell you the length of a list
+
+dict:
+    - Data structure that allows you to associte one value with another --> like a dictionary.
+    - Dictionary: Words (keys/columns' names) and definitions (variables/columns' info).
+    - Sort of two-dimentional.
+    - Just a collection of values that allow you to associate keys with values
+    - you can use functions together with dictionaries to manipulate data in pro of any necessity(ies)
+
+--> "One of the nice things about functions is that they allow us to write code we can use and reuse"
+--> "functions allow use to create abstractions"
+--> Abstraction: 
+    - The process of hiding implementation details and displaying only essential functionality.
+    - e.g. abstract class and interface in Java.
+
+
+                 
