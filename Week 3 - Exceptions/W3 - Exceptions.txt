@@ -1,0 +1,27 @@
+CS50P - Lecture 3 - Exceptions
+////////////////////////////////////////////////////////////////////////////////////////////
+Exception --> refers to problems in your code 
+
+* SyntaxError --> Problem with the code that you have typed 
+
+* RunTime errors --> happen while your code is running
+
+"It's really up to you to write some additional code defensively to detect when those errors (RunTime errors) happen"
+
+* ValueError
+
+try --> keyword to check whether or not something exceptional has happened
+
+A much better practice would be to figure out what kind of errors could happen 
+
+else is also sopported to work with the try-except feature of Python
+
+--> If you want to handle an exception in Python, but you want to pass on doing anything with it, 
+    then you use the 'pass' keyword.
+
+* caller: to call a functions means to use it
+* call-ee: the function being called
+
+* you can even raise exceptions yourself using Python's 'raise' keyword
+
+--> Errors are inevitable :D
