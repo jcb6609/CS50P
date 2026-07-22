@@ -1,0 +1,133 @@
+W4 - Libraries:
+////////////////////////////////////////////////////////////////////////////////////
+* Libraries:
+    - Files of code other people have written that we can use in our own programs
+    - or, a code that we've so we can use it in our own program
+
+* Module: 
+    - A library that typically has one or more functions or other features built into it.
+
+--> Generally, the purpose of a library (or module) is to encourage reusability of code.
+
+--> When you install the Python interpreter, you don't only get Python but a whole bunch of modules as well 
+
+--> Python comes with a random library:
+* random
+
+--> These modules provide you with functions that you don't have access to just by default,
+    You have to be more deliberate about loading them into the computer's memory.
+
+Documentation:
+	docs.python.org/3/library/random.html
+
+    - within the documentation you will see some of the functions or other functionalities that the module provides
+
+
+--> But how do you go about loading a module into your own program? SO that you can use the function in that module?
+
+* import:
+    - The import keyword in Python allows you to import the contents of the functions form some module.
+
+--> random.choice(seq)
+    - Function random.choice()
+    - the 'seq' argument refers to sequence, which could be a lit or something list-like
+
+* from:
+    - Keyword in Python that you can use when importing functions from a module, but
+    - it allows you to be more specific than import alone.
+
+* random.randint(a, b)
+    - get back a random int that is between (arguments) a and b inclusive.
+
+* random.shuffle(x)
+    - it takes a list, for instance, of values and just shuffles them up, it randomizes it
+    - It does not returns you a value that contains the shuffled cards in this case, but rather it shuffles the list it's given itself (x)
+
+* statistics:
+    - statistics library that contains all sort of functions for doing things more statistical in nature like calculating means or medians or modes, etc.
+    - docs.python.org/3/library/statistics.html
+
+* mean()
+    - function from the 'statistics' module
+    - returns the mean
+
+* command-line arguments:
+    - Feature of programming langauges
+    - Allows you to provide arguments that is input to the program of just when you're executing at the command line 
+    - When you are running a program in the command line you can provide any input after the command that you are typing, which will be passed as an input
+        ~ python hello.py ...
+
+* sys:
+    - Module focused on system functionalities 
+    - docs.python.org/3/library/sys.html
+
+* sys.argv
+    - In the sys module, there is a variable called argv (argument vector).
+    - argv --> describes the list of all of the words tat the human typed in at their prompt before they hit enter.
+    - sys.argv variable is a list, which means that the first element is gonna be the first word that you type, ..., and so forth
+
+* slices:
+    - To take a slice of a list means to take a subset of it.
+
+* packages:
+    - 3rd party libraries that we can install in our own pc and gain access to even more functionalities
+    - Module that is implemented in a folder, not just a file but a folder
+
+--> One of the locations you can get all of these packages is called the PYTI website,
+--> PYTI: The Python package index which lives at thE URL pypi.org
+
+---> cowsay
+    - Package in Python that allows you to have a cow say something 
+    - pypi.org/project/cowsay 
+
+--> Nowadays, a lot of languages, including Python, have its own package manager pip
+
+* pip:
+    - program (generally comes with Python) that allows you to install packages onto your own Pc by just running a command
+
+--> $ 'pip' install cowsay
+
+* APIs:
+    - API: Application Programming Interface --> third-party services that we can write code that talk to
+    - Many APIs live on the internet these days
+    - so long as you have a browser/some experience with python, you can write code 
+      that in effect pretends to be a browser, connects to that third-party API on a 
+      server, and downloads some data that you can then incorporate into your own program.
+      How do you do this?
+* requests:
+    - popular package you can install via pip called requests
+    - The requests library allows you to make web requests, internet requests, using Python code essentially as though you were a browser yourself
+    - pypi.org/projects/requests
+
+--> Apple has its own API for their iTunes service. 
+
+* URL:
+    - https://itunes.apple.com/search?entity=song&limit=1&term=weezer
+    - entity=song --> only songs
+    - limit=1 --> get back information for only 1 song
+    - term-weezer --> from weezer only
+
+--> If we open the URL, we will finish downlaoding a txt file, if we open it we will see something like:
+
+{
+ "resultCount":1,
+ "results": [
+{"wrapperType":"track", "kind":"song", "artistId":115234, "collectionId":1440868131, "trackId":1440868258, "artistName":"Weezer", "collectionName":"Weezer (Green Album)", "trackName":"Island In the Sun", "collectionCensoredName":"Weezer (Green Album)", "trackCensoredName":"Island In the Sun", "artistViewUrl":"https://music.apple.com/us/artist/weezer/115234?uo=4", "collectionViewUrl":"https://music.apple.com/us/album/island-in-the-sun/1440868131?i=1440868258&uo=4", "trackViewUrl":"https://music.apple.com/us/album/island-in-the-sun/1440868131?i=1440868258&uo=4", 
+"previewUrl":"https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview211/v4/52/a6/03/52a6032e-39c0-fd3e-555d-ce683f3d9d31/mzaf_7707796819108024384.plus.aac.p.m4a", "artworkUrl30":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/ef/19/fcef196c-3f81-e9da-f02a-b55d900e7d69/16UMGIM53162.rgb.jpg/30x30bb.jpg", "artworkUrl60":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/ef/19/fcef196c-3f81-e9da-f02a-b55d900e7d69/16UMGIM53162.rgb.jpg/60x60bb.jpg", "artworkUrl100":"https://is1-ssl.mzstatic.com/image/thumb/Music115/v4/fc/ef/19/fcef196c-3f81-e9da-f02a-b55d900e7d69/16UMGIM53162.rgb.jpg/100x100bb.jpg", "collectionPrice":9.99, "trackPrice":1.29, "releaseDate":"2002-05-14T12:00:00Z", "collectionExplicitness":"notExplicit", "trackExplicitness":"notExplicit", "discCount":1, "discNumber":1, "trackCount":10, "trackNumber":4, "trackTimeMillis":200307, "country":"USA", "currency":"USD", "primaryGenreName":"Rock", "isStreamable":true}]
+}
+
+--> what we see is a bunch of key-value pairs, in other words a:
+
+JSON
+    - JSON: Java Script Object Notation.
+    - JSON itself is typically used nowadays as a language agnostic format for exchanging data between computers
+      which means that you don't have to use JS, you can use other language to read-write JSON
+    - docs.python.org/3/library/json.html
+
+--> Using our own functions in other files:
+    - when we are trying to use our own function in other files, we might take care of the main() function caller from the original file with our function implementation since 
+      when importing the file from where our function is (e.g. 'from sayings import hello'), if we do not manage the main() function caller correctly, we might be calling the whole program rather than only using its desired function implementation,
+    - therefore, we need to use the technique:
+        if __name__ == "__main__":
+            main()
+    - in this way, calling the whole main() function is ignored, so that using only the funcitonality from the imported function implementation.
