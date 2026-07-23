@@ -36,3 +36,4 @@ Regiment standards (preferences) --> PEP 8
 * black:
     - Program you can install that makes a lot of decisions for you (trend)
     - black.readthedocs.io
+    - pip install black
