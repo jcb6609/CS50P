@@ -1,0 +1,38 @@
+Style - CS50P Shorts
+/////////////////////////////////////////////////////////////////////////////////////////////
+Regiment standards (preferences) --> PEP 8
+
+* PEP 8:
+    - Set of proposals that the community within the world of Python typically generate to not only propose new ideas, but also to codify certain standards
+    - Proposal that tries to standardize what our code should look like 
+    - peps.python.org/pep-0008
+
+* Readability counts:
+    - A style is about consistency.
+    - Consistency with this style guide is important.
+    - Consistency within a project is even more important.
+    - Consistency within one module or function is the most important.
+
+    * Indentation (4 spaces)
+    * Tabs or Spaces?
+    * Maximum Line Length
+    * Blank Lines
+    * Imports
+    * ...
+
+--> There are also tools that help us solve these problems as well:
+
+* pylint:
+    - linter: Program that reads your code and tries to figure out if there are inconsistencies 
+    - pip install pylint
+    - pycodestyle.pycqa.org
+
+--> Other tools less noisy
+
+* pycodestyle:
+    - Program that will take care of the process of reformatting your code for you if it is a bit messy 
+    - pycodestyle.pycqa.org
+
+* black:
+    - Program you can install that makes a lot of decisions for you (trend)
+    - black.readthedocs.io
