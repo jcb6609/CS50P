@@ -1,0 +1,35 @@
+Week 5 - Unit Tests:
+////////////////////////////////////////////////////////////////////////////////////////////
+Focus:
+    - Write a little extra code to test the code that you wrote.
+    - Writing our own tests so as to be all the more confident, all the more certain.
+////////////////////////////////////////////////////////////////////////////////////////////
+* assert:
+    - keyword in Python that allow you to 'assert' that something is True, and if it is, nothing is gonna happen
+    - If we assert something in Pyton and it is not True, then the thing we are inserting, a Boolean expression, is false, then we will see an error.
+
+* pytest:
+    - Third party program that you can download and install that will automate the testing of your code, so long as you write the tests.
+    - What's nice about this library and others like it is that it adopts some conventions so that you don't have to write as many lines of code yourself manually, they do some of that automatically for you. 
+    - pytest is actually a little simplier than the unit testing frameworks that come with Python itself
+    - pip install pytest
+    - docs.pytest.org
+    - all function in our program to test will run automatically thanks to pytest
+    - 'pip show pytest' --> to check details of our pytest library (we can check in what version of Python does it run)
+
+// when running pytest for our desired file in the command prompt:
+
+	> (line of code) --> clue that this line of code (test) failed
+
+* Unit Testing:
+    - Formal way of describing testing individual units (functions) of your programs
+    - What are those individual untis? --> They're typically functions 
+
+--> If we want to test whether our function behaves properly when for example we pass an string, we can raise an exception
+
+--> It is ideal to run as many tests all at once as possible to give you as many clues as possible to finding your bug
+
+--> when passing with no errors doesn't necessarily mean that it has passed 100% of my current tests
+
+--> We can wite tests to ensure that if someone make a change to the same code, then we were able to see whether that changed has either broken or not broken our code
+
