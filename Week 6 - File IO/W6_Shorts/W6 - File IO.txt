@@ -1,0 +1,30 @@
+W6 - File I/O:
+////////////////////////////////////////////////////////////////////////////////////////////
+* File I/O:
+    - Writing code that can read from, or write from to, that it save information to, file themselves.
+    - Wouldn't it be nice to be able to save information when our program finishes.
+
+
+* list
+    - Store more than one piece of information
+
+* open
+    - Function whose purpose in life is to do just that, to open a file,
+    - but to open it up programmatically so that you, the programmer, can actually READ information from it or WRITE information to it.
+    - Open is like the programmer equivalent of double clicking on an icon,
+    - but it is a programmer's technique because it's gonna allow you to specify exactly what you want to read from or write to that file.
+    - docs.python.org/3/library/functions.html#open
+
+* with
+    - keyword that allows you to specify that, in this context, we want to open and automatically close some file 
+
+* csv
+    - library with useful functions, we can use it to deal with corner cases
+
+* binary file:
+    - file that's really just zeros and ones
+    - they can be laid out in any pattern you might want, particulary if you wan to store not textual information but maybe graphical, or audio, or video information as well
+
+* PIL:
+    - Library that allows you to navigate image files as well and to perform operations on image files, you can apply filters, animate them as well etc
+    - pillow.readthedocs.io
