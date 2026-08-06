@@ -1,0 +1,166 @@
+W7 - Regular Expressions:
+////////////////////////////////////////////////////////////////////////////////////////////
+* regular expression (or regex):
+    - Patterns to match on some kind of data (often user-input)
+    - With regex, we will have the capability to define patterns in our code to compare them against data we are receiving from someone else, whether it's just to validate it, or even to clean up messy data.
+
+* re
+    - library for regex 
+    - provides capabilities to define and check for and even replace patterns
+    - allows use to define some patterns (like a pattern for an email address), and then use some built-in functions to validate a user's input against that pattern or even use this patterns to change user's input or extract partial information from them
+    - docs.python.org/3/library/re.html
+
+* search
+    - function from the re library
+    - Function's functionality:
+        ~ re.search(pattern, string, flags=0)
+            --> 'pattern' argument: pattern we want to search for in (for instance) a string that came from the user 
+            --> 'string' argument: actual string that we want to search for that pattern
+            --> 'glags=' optional argument: A flag in general is like a parameter you can pass in to modify the behavior of the function (initially not used here)
+
+--> We need more vocabulary
+--> There are certain symbols that are used to define patterns 
+--> Once you have access to regular expressions (or a library that offers that feauture) you can more powerfully express as follows:
+--> The pattern that we pass at re.search() can take a whole bunch of special symbols:
+    
+* '.' --> any character except a newline:
+
+    - We can use '.' to represent any character except a newline, a blank line.
+    - That is to say, if we don't really care what letters of the alphabet are in the user's
+      username, we just want to be one or more characters in the user's name, '.' allows us 
+      to express A though Z, uppercase and lowercase and a bucnh of otter letters as well.
+
+
+* '*' --> 0 or more repetitions:
+
+    - If we say something '*', that means that we'll willing to accept either zero repetitions
+      (that is nothing at all) or more repetitions.
+
+
+* '+' --> 1 or more repetitions:
+
+    - If we say something '+', that means that we'll willing to accept either one repetition
+      (at least one character there, one symbol) or more repetitions.
+
+
+* '?' --> 0 or 1 repetitions:
+
+    - If we say something '+', that means we want either zero or one (of a character)
+
+
+* '{m}' --> m repetitions:
+
+    -  We can specify the number of repetitions with '{m}'
+    - e.g. .{1} --> require at least one '{1}' of any characters '.' here
+
+* '{m,n}' --> m-n repetitions:
+
+    - If we want to range our repetitions like a determinate few characters besides a 
+      determinate many characters at the same time we can use '{m,n}' (a range of m through
+      n repetitions).
+
+* '^' --> matches the start of the string:
+    
+    - caret symbol: '^'
+    - used to represent that you want a regex pattern to match the start of the string specifically, not anywhere but the start.
+
+* '$' --> matches the end of the string, or, matches just before the newline at the end of the string 
+
+* '[]' --> set of characters:
+
+    - We can use square brackets inside ouf our pattern 
+    - Inside of those square brackets include one or more characters that we want to look for specifically
+    - If we want to specify within the square brackets a range (of lettsrs let's say), we could actually just use a hyphen '-':
+        ~ e.g. [a-z] --> any character between a and z (meaning we can ONLY accept this character)
+        ~ e.g. [a-zA-Z] --> any character between a and z or any character between A and Z (meaning we can ONLY accept this character)
+        ~ e.g. [a-zA-Z0-9_] --> any character between a and z or any character between A and Z or any digit etween 0 and 9 or underscore '_'
+
+--> Alternatively, we could inside of those square brackets put a caret symbol...
+
+* '[^]' --> complementing the set:
+
+    - the caret symbol inside of square brackets means the complement operatore meaning "you cannot match any of these characters (inside the square brackets)"
+    - e.g. [^@] --> any character on the keyboard except for an @ sign --> unallows things like '@'
+    - e.g. [^@]+ --> any character on the keyboard except for a @ sign with 1 or more repetitions --> unallows things like '@@@...'
+
+* '\d' --> decimal digit:
+    - \d meaning [0-9]
+
+* '\D' --> not a decimal digit:
+    - \D meaning [^0-9]
+
+* '\s' --> whitespace characters:
+    - whitespace characters like a single hit of the space bar, or maybe hitting Tab on the keyboard, that's whitespace
+
+* '\S' --> not a whitespace character:
+    - complement of \s
+    - might be letters, and punctuation, and other symbols as well
+
+* '\w' --> word character ... as well as numbers and the underscore:
+    - \w meaning [a-zA-Z0-9_]
+
+* '\W' --> not a word character:
+    - \W meaning [a-zA-Z0-9_]
+
+* 'A|B' --> either A or B
+    - where A and B can be any other 
+    - condtional or for regex, usually in parenthesis; e.g. (A|B|C)
+
+* '(...)' --> a group 
+
+* (?:...) --> non-capturing version  
+
+    
+--> There is another mechanism in the re.search function, the 3rd argument, by defualt, 'flags=0'
+--> this 3rd argument also accepts built-in re variables (contstant) that have meaning to re.search():
+
+* re.IGNORECASE
+    - If passed, it is gonna ignore the user's input case (case-insensitive) 're.search("...", user_input)'
+
+* re.MULTILINE
+    - If passed, it will handle the user's input that maybe spans multiple lines 
+
+* re.DOTALL
+    - If passed, you can configure the dot '.' to recognize not just any character except newlines but any character plus newlines as well
+
+--> There are other functions in the 're' library:
+
+* re.match():
+    - 're.match(pattern, string, flags=0)'
+    - very similar to re.search() except you don't have to specify the '^' symbol at the very beginning of uor regex pattern if you want to match from the start of a string
+    - re.match() by design will automatically start matching from the start of the string for you.
+
+* re.fullmatch()
+    - 're.fullmatch(pattern, string, flags=0)'
+    - does the same thing as re.match() but now it specifies the '$' symbol at the very end of our regex besides the "^" symbol at the beginning of your regex.
+    - re.match() by design will automatically start matching from the start of the string '^' until the end of the string "$" for you.
+
+
+
+* ':=' --> walrus operator
+    - It both allows you to both assign a value and ask a Boolean question about it
+
+
+* re.sub()
+    - 're.sub(pattern, repl, string, count=0, flags=0)'
+    - sub means substitute
+    - pattern --> The pattern, the regular expression that you want to look for 
+    - repl --> replacement string, what do you want to replace that pattern with?
+    - string --> where do we want to do all that? Well, we pass in the string that we want to do the substitution on.
+    - count --> how many ties do you want to do find and replace
+
+* re.split()
+    - 're.split(pattern, string, maxsplit=0, flags=0)'
+    - allows us to split a string, not using a specific character or characters like a comma and a space but multiple characters as well.
+
+* re.findall()
+    - 're.findall(pattern, string, flags=0)'
+    - allows us to search for multiple copies of the same pattern in different places in a string so that we can perhaps manipulate more than just one.
+
+
+
+
+
+
+
+
