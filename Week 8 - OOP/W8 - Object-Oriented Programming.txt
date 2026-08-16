@@ -1,0 +1,104 @@
+W8 - Object-Oriented Programming:
+////////////////////////////////////////////////////////////////////////////////////////////
+--> Throughout this course, we have been writig procedural code (style of computer programming
+    that follows a step-by-step, top-to-bottom sequence).
+
+--> Class: A blueprint or template used to create objects
+
+* Function: represents an action (behavior)
+* Class: represents a thing (blueprint for data + behavior)
+
+* tuple:
+    - Another type of data in python that is a collection of value:
+    	~ e.g. (x, y)
+        ~ e.g. (x, y, z)
+    - Similar to a list, with the difference that a tuple is immutable (you cannot change/update the values of it)
+    - We can index into it numerically: [0, 1, ..., n]
+    - While trying to modify (or overwriting) on of the tuple elements, we will get back an error
+    - Instead, if we want to modify/change/overwrite vars, then we would use a list, which are mutable
+
+* class - classes:
+    - allows us to create our own data types (say for example a data type called 'stuent')
+    - class: 
+        ~ blueprint for pieces of data (objects)
+        ~ mold that we can define and name, and whenever used that mold/blueprint we get types of data that are designed exactly as we want
+        ~ allows use to create our own objects
+
+* class (keyword):
+    - docs.python.org/3/tutorial/classes.html
+    - general purpose term that allows use to define custom containers with custom names for pieces of data.
+    - By convention, the name of our mold usually has its first letter capitalized:
+        ~ e.g. 'class Students:'
+    - classes have (what for now we'll call) attributes, which are properties of sorts that allow you to specify values inside of them, and the syntax for that happens to be a dot (e.g. student_1.)
+
+* objects:
+    - you create objects out of classes by using a constructor (special method)
+    - A class is like a blueprint, and an object is when you use that blueprint to create such an object
+    - A class is the definition of a new data type, the object is the instantiation of
+    - the class's object is mutable, but we can make it ummutable
+    - instance is a synonym of object; the instance of a class is an object of that class
+
+* attributes - instance variables:
+--> E.g.:
+""
+        # creation of a class (user-defined data type)
+class Students():
+    ...
+
+        
+def get_student():
+	# creation of an object using a (class/data-type based) constructor (special method which has the same name as the desired class to assign the object to)
+    student_1 = Student()
+
+    	# initialization of our object's attributes (instance attributes)
+    student_1.name = input("Name: ")
+    student_1.house = input("House: ")
+	# '.name' and '.house' are really just variables (instance variables) inside of an object (in this case 'student_1') whose date type is, in this case, 'Students'
+""
+
+--> with classes, unlike with dict, we can standardize what those instance attributes can be, as well as to what values can we set them to
+
+
+* class' methods (special methods):
+
+--> In the context of classes, there are a number of, not just attributes or instance variables that you can put inside but also, methods
+--> classes come with certan methods or functions inside of them that we can define and they just behave in a special way determined by Python 
+--> these functions allow us to determine behavior in a standard way (special methods in that sense)
+
+
+* instance method '__init__()':
+
+    - Used to initialize (initializer) the contents of an object from a class
+    - '__init__(self, var1, var2, ..., varn)' --> It sets initial values for the class object's attributes
+
+
+* self:
+
+    - Placeholder that ensures the data is written on your specific copy of the class
+    - helps to store the attributes of an object creation call (an object that has just been
+      instantiated) by/as a hidden argument 'self' inside of the instance method __init__() 
+      therefore, giving you access to the current object that was just created
+    - there is nothing in the object initially (from the constructor call), but that object
+      exists in the computer's memory. It's now up to us to store those attributes inside of
+      the object. How? By using the 'self' argument/convention as our object's attribute 
+      reference to, again, define those object attributes since, again, there is nothing 
+      inside of it.
+    - In other words, 'self' is a convention to define a just instatiated object's attributes! 
+    - 'self', as its name implies, gives you access to the current object that was just created/instantiated
+
+--> the constructor (or constructor call) construct/instantiate an obj for us
+--> the constructor method calls the '__init__(self, ...)' method
+--> a constructor is a mehtod and NOT a function since its definition is implemented inside of a class (by calling the instance method '__init__(self, ...)')
+--> the instance method allows us to implement the initialization of an object (an its attributes)
+--> the constructor will automatically call the __init__() method (which is inside of the class specified by the constructor call (which has the same name as the class)), and therefore initializing the attributes (constructor arguments) of the just instantiated obj by automativally calling the instance method __init__() when using a constructor 
+--> we can create an instance variable/attribute called 'self.names' that stores a list of names or a list of houses let's say
+--> objects are stored in the computer's memory by taking up some numbers of bytes
+--> Why using classes? --> ensure the correctness of your data much more, you can error-check things, you can deign complicated software more effectively
+
+
+
+
+
+
+
+
