@@ -96,6 +96,41 @@ def get_student():
 --> Why using classes? --> ensure the correctness of your data much more, you can error-check things, you can deign complicated software more effectively
 
 
+--> Classes encorage you to encapsulate inside of a class all functionality related to that class
+    - e.g. If we want to validate that attribute/var 'name' exists, that belongs in the class from where that attribute is being initilaized
+
+* raise:
+    - another keyword related to exceptions
+    - allows the programmer to create your his exceptions
+    - enough to somehow alert the programmer that there has been an error
+    - we can pass an explainatory message when raising an error:
+        ~ e.g. raise ValueError("Incorrect input")
+    - when using 'raise' inside of a class, we can catch that raised error by using a try-except block in whenever def function the object is being created/initialized (constructor call)
+
+--> In a class, by the __init__(self, ...) method's functionality, we can control exactly what's going to be installed inside of our object
+
+--> There are more special methods in Python when it comes to classes:
+
+
+* __str__(self)
+ 
+    - Special method that, if you define inside if your class, Python will automatically 
+      call this function anytime some other function wants to see our object as a string.
+    - By default, if we do not have this method defined in our class, whenever refering to 
+      our object without an attribute (for example when simply printing the object after its
+      initialization), it's going to print out its memory location spot e.g. '<__main__.Class
+      object at 0x102733e80'
+
+
+--> We can also create our own mehthods (new functionalities) specific for our class
+
+
+
+
+
+
+
+
 
 
 
