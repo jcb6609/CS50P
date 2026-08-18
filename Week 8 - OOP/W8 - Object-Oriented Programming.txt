@@ -126,8 +126,48 @@ def get_student():
 
 
 
+* properties:
+
+    - A property is really just an attribute that has even more defense mechanisms put into place
+    - A little more functionality implemented by us (the programer), to prevent other programmers (which might still us) from messing things up
+    - So, a property, is going to be an attribute that we are gonna have more control over, how? We just write a little more code --> keyword '@property'
+
+* '@property':
+
+    - keyword (which is technically a function) 
+    - We will see a new '@' symbol syntax that allows us to decorate functions
+    - In the word of Python, you can have decorators, which are functions that modify the behavior of other functions
+    - We can use these decorators as a way of defining properties
 
 
+--> In order to access/update an attribute inside main() (or other function(s)), you go through some function (Getter and Setter) 
+    - Getters and Setters are methods used to control access to an object's attributes, ensuring data encapsulation and validation
+        ~ Getters retrieve or get the value of an attribute
+        ~ Setters modify or set the value/data of an attribute, often adding validation logic before the change is applied
+
+--> Both Getter and Setter should have the same name of the desired attribute to change 
+
+--> To specify the creation/usage of Getter and Setters, we need to use 2 decorators:
+    - '@property' to define the Getter method (defined above the Getter method definition)
+    - '@attribute.setter' (with attribute being the name of the attribute treated) to define the Setter method (defined above the Setter method definition)
+
+
+--> Again, you name the Getter and Setter methods exactly like you would like the property to be called (its name)
+
+
+--> Colliding names:
+    - Recall that using Getters and Setter might represent some collinding names whenever refering to the 'obj/self.attribute' notation whenever updating/checking/returning back an obj's property inside of these Getters and Setters block,
+      therefore, it is mandatory for us to use the 'obj/self._attribute' notation to avoid calling, for example, a Setter again and again for that specific 'obj/self.attribute' notation which, as we remember, calls the Setter for that attribute, something that we do NOT want to do inside of these Getter and Setter blocks
+
+    - Python is basically confused since inside of our class, whenever having a setter or getter method for an specific attribute, we have to be careful whenever using the 'self.attribute' syntax, since it will basically trigger the setter method for that attribute, which is something that of course we do not want to do whenever we are working inisde of these Getter and Setter methods, since having 'self.attribute' will basically call the method (Setter in this case) for that attribute again and agein, that's why we use the 'self._attribute' convention to avoid colliding names, so that separating the property's name attribute (bu using '._') from the actual obj's attribute default code.
+
+
+--> protecting the data in the way in (when obj's data is initialized), and protecting the data when updated (when obj's data is updated), all by suing Getter and Setter methods
+
+--> For every Setter we need a Getter and viceversa
+
+--> Python focuses on conventions, an not hard constrains
+    - In Python there is no notion of visivility (no public, private, or protected acess modifiers)
 
 
 
