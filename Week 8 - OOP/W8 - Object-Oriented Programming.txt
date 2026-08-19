@@ -170,6 +170,63 @@ def get_student():
     - In Python there is no notion of visivility (no public, private, or protected acess modifiers)
 
 
+--> The reality is that we've all been using classes and objs for weeks now
+    - e.g. getting integers from the user with 'int()'
+        ~ class int(x, base=10)
+        ~ Any time we have converted a string for instance, we have been creating an obj opf type int 
+    - e.g. str are also classes with 'str()'
+        ~ class str(object='')
+        ~ str.lower() --> where str is the obj created and .lower the method built in inside the class
+        ~ str.strip([chars])
+    - e.g. list
+        ~ class list([iterable])
+        ~ list.append(x)
+    _ e.g. dict
+
+
+--> It turns out, there are other types of methods in the world:
+    - So far, we have been deliberate in calling all of our variables 'instance variables' and all of our methods 'instance methods'
+
+* class methods
+
+    - It is not really necessary or sensible to associate a function with objects of a class but rather with the class itself
+    - An instance, or an object of a class, is a very specific incarnation thereof
+    - functionality that it's gonna be exactly the same no matter the obj/instance in question
+    - Sometimes you want some functionality, some action to be associated with the class itself no matter what the specific objects/instances/vars are
+    - for that, we have a keyword called '@classmethod'
+
+* '@classmethod' :
+
+    - another decorator/function that we can use to specify that its related method is not by defualt, implicitely an instance method that has access to 'self', this is a class method that is not gonna have access to 'self' (but rather to 'cls') but it does know what class it is
+
+
+
+--> Recall:  When you instantiate a class (e.g., obj = MyClass()), Python automatically 
+             invokes a two-step process: first, it calls __new__() to create the object 
+             instance, and then it immediately calls __init__() to initialize its attributes.
+
+
+--> Recall:  Even if you do not write an __init__() method, or even if the obj you have has 
+             no defined attributes, Python still calls one __init__() default (empty) method
+             inside of the obj's class automatically behind the scenes.
+
+
+--> When should you use a class to represent something in your code?
+    - Basically, very often when you are trying to represent a real/fantasy world entity
+    - data structure definitions as int, str, list, dict, etc
+
+--> A class is a blueprint that allows you to create one or more objects with that same blueprint.
+
+--> but what if we are only suppose to have one object (despite the capability of creating more) one singleton
+    - here is where '@classmethod' appear
+
+--> In addition to class methods, there are also class variables, which exist within the class itself and there is just one copy of that variable for all of the objects there are (They all share the same variable)
+
+--> Recall that 'self' is a convention to refer about specific objects
+
+
+
+
 
 
 
