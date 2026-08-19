@@ -225,6 +225,86 @@ def get_student():
 --> Recall that 'self' is a convention to refer about specific objects
 
 
+--> We usually import the classes to enhance reusability
+
+--> There's yet other types of methods we can have in Python, they tend to be called 'static methods'
+
+* static methods: 
+
+    - come with decorator '@staticmethod'
+    - We just have to know there are more fnctionalities
+
+
+* inheritance:
+
+    - By OOP, there is an opportunity to define our classes in a heriarchical fashion, whereby you can have one class inherit from or borrow attributes- that is methods or variables from another class if they all have those in common
+    - As soon as you start copy pasting code, there's probably a better way
+    - Python supports inheritance, whereby we can define multiple classes that somehow relate to one another they don't need to exist sort in parallel in this way, there could actually be some hierarchy between them 
+    - How to link classes together syntactically in our code? --> e.g. def Student(Wizard) --> 'Student' class inherits (all of the implementations and characteristics) from 'Wizard' class
+    - Now, we have linked classes toether, but now, how to access to our (inherited from) class method, let's say __init__() inside fo class 'Wizard'? That is using the functionality of the 'Wizard' class --> use 'super()', which is a reference to the superclass 'Wizard' of this class 'Student'
+
+--> When we descend from anoter class, that is when you subclass a superclass or a super superclass, we actually do inherit all of the functionality, not just from one level above you but from two or three, so we can indeed access some of the functionality as well, and we can even override it if we want some of these classes to behave a little bit differently than others.
+
+--> There are ways to implement descendants from multiple parents and there's different ways to do this
+
+
+* OOP and exceptions:
+
+    - We've been using this feature of OOP for quite some time in the form of exceptions
+    - There is any number of other errors as well, but they are all, themselves, hierarchical in nature
+    - Check the following Error subset:
+
+Basic Exception
+    +-- KeyboardInterrupt
+    +-- Exception
+        +-- ArithmeticError
+        |    +-- ZeroDivisionError
+        +-- AssertionError
+        +-- AttributeError
+        +-- EOFerror
+        +-- ImportError
+        |    +-- ModuleNotFoundError
+        +-- LookupError
+        |    +-- KeyError
+        +-- NameError
+        +-- SyntaxError
+        |    +-- IndentationError
+        +-- ValueError 
+    ...
+
+    - This is indeed just a subset of the available exceptions that come built into Python
+    - For example, when we are using the try-except blocks in Python, generally speaking we try to catch very specific exceptions like ValueError, but techincally you can catch the parent exception or even the garandparent exception for a given exception, especially if you are not necessarily sure which one is going to get raised, or, better yet, there could be many exceptions that get raised but you want to handle them all in the same, and we do not want to necessarily enumerate them in parenthesis, separated by commas, we want to say we want to handle all exceptions of a certain superclass in much the same way
+    - So, this has been latent this whole time, any time we've seen or used or caught or, now, raised exceptions, and built into Python in the previous subset hierarchy, and if we were to invent our own exception, generally we wouldn't want to start from scratch, we would like to descend from (that is, sublcass) one of these existing exceptions and add your own twist on it, your own functionality as well
+
+
+
+* Operator overloading:
+
+    - Python supports this notion of operator overloading, whereby we can take very common symbols like '+' or '-' or other such syntax on the keyboard and we can implement our own interpretation thereof
+    - '+' does not have to equal addition and '-' does not have to equal subtraction 
+    - In fact, we have seen another context in which '+' means something else.
+    - Plus has not always in python, meant addition, per se
+        ~ e.g. concatenation: where '+' means not an arithemtic sum operation but rather a string-linking operator
+	~ e.g. for adding to a list
+    - Plus has actually been, funny enough, overloaded by the authors of Python for us, so that we can use the same symbol in much the same way as addition but with different data types to solve slightly different problems
+    - docs.python.org/3/reference/datamodel.html#special-method-names --> special methods that come with classes:
+        ~ object.__add__(self, other) --> working for any object; it takes BY CONVENTION two arguments 'self' (obj to the left of the '+' operator) and 'other' (obj to the right of the '+' operator)
+
+--> we could technically use objs from different classes to apply some operator overloading functionality!
+
+
+--> recall that to overload a specific operator, we would need to check the documentation on how to implement the special method for it.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
